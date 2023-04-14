@@ -132,6 +132,12 @@ a {
   align-items: center;
   border-bottom: 3px solid #0b7b4d;
 }
+.box3 .project .remote .brand a {
+  opacity: 0.5;
+}
+.box3 .project .remote .active {
+  color: #0b7b4d;
+}
 .box3 .project .content {
   width: 100%;
   height: 90%;
@@ -244,6 +250,12 @@ a {
   align-items: center;
   border: 3px solid #0b7b4d;
 }
+.box3 .project .content1 .text .explain .link .webpage:hover, .box3 .project .content1 .text .explain .link .document:hover {
+  background-color: #0b7b4d;
+}
+.box3 .project .content1 .text .explain .link .webpage:hover a, .box3 .project .content1 .text .explain .link .document:hover a {
+  color: #faefeb;
+}
 .box3 .project .content1 .homepage img:hover {
   transform: translateY(-58%);
 }
@@ -354,6 +366,12 @@ a {
   justify-content: center;
   align-items: center;
   border: 3px solid #0b7b4d;
+}
+.box3 .project .content2 .text .explain .link .webpage:hover, .box3 .project .content2 .text .explain .link .document:hover {
+  background-color: #0b7b4d;
+}
+.box3 .project .content2 .text .explain .link .webpage:hover a, .box3 .project .content2 .text .explain .link .document:hover a {
+  color: #faefeb;
 }
 .box3 .project .content2 .homepage img:hover {
   transform: translateY(-76%);
@@ -466,6 +484,12 @@ a {
   align-items: center;
   border: 3px solid #0b7b4d;
 }
+.box3 .project .content3 .text .explain .link .webpage:hover, .box3 .project .content3 .text .explain .link .document:hover {
+  background-color: #0b7b4d;
+}
+.box3 .project .content3 .text .explain .link .webpage:hover a, .box3 .project .content3 .text .explain .link .document:hover a {
+  color: #faefeb;
+}
 .box3 .project .content3 .homepage img:hover {
   transform: translateY(-53.5%);
 }
@@ -576,6 +600,12 @@ a {
   justify-content: center;
   align-items: center;
   border: 3px solid #0b7b4d;
+}
+.box3 .project .content4 .text .explain .link .webpage:hover, .box3 .project .content4 .text .explain .link .document:hover {
+  background-color: #0b7b4d;
+}
+.box3 .project .content4 .text .explain .link .webpage:hover a, .box3 .project .content4 .text .explain .link .document:hover a {
+  color: #faefeb;
 }
 .box3 .project .content4 .homepage img:hover {
   transform: translateY(-67.5%);
@@ -688,6 +718,12 @@ a {
   align-items: center;
   border: 3px solid #0b7b4d;
 }
+.box3 .project .content5 .text .explain .link .webpage:hover, .box3 .project .content5 .text .explain .link .document:hover {
+  background-color: #0b7b4d;
+}
+.box3 .project .content5 .text .explain .link .webpage:hover a, .box3 .project .content5 .text .explain .link .document:hover a {
+  color: #faefeb;
+}
 .box3 .project .content5 .homepage img:hover {
   transform: translateY(-61.1%);
 }
@@ -798,6 +834,12 @@ a {
   justify-content: center;
   align-items: center;
   border: 3px solid #0b7b4d;
+}
+.box3 .project .content6 .text .explain .link .webpage:hover, .box3 .project .content6 .text .explain .link .document:hover {
+  background-color: #0b7b4d;
+}
+.box3 .project .content6 .text .explain .link .webpage:hover a, .box3 .project .content6 .text .explain .link .document:hover a {
+  color: #faefeb;
 }
 .box3 .project .content6 .homepage img:hover {
   transform: translateY(-61.1%);

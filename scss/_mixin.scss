@@ -107,6 +107,12 @@ $fontColor : #0b7b4d;
                     align-items: center;
                     border: 3px solid $fontColor;
                 }
+                .webpage:hover,.document:hover{
+                    background-color: $fontColor;
+                    a{
+                        color: $bgColor;
+                    }
+                }
             }   
         }
     }
@@ -238,6 +244,14 @@ $fontColor : #0b7b4d;
             justify-content: space-around;
             align-items: center;
             border-bottom: 3px solid $fontColor;
+            .brand{
+                a{
+                    opacity: 0.5;
+                }
+            }
+            .active{
+                color: $fontColor;
+            }
         }
         .content{
             width: 100%;
