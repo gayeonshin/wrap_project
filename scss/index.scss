@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+@import "reset","mixin";
+
+@font-face {
+    font-family: 'Binggrae-Two';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$shadowColor : #fbb9a5;
+$bgColor : #faefeb;
+$fontColor : #0b7b4d;
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    background-color: $bgColor;
+}
+
+#wrap{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper {
+    width: 95%;
+    height: 100%;
+}
+
+.swiper-slide{
+    padding: 10% 5%;
+    // first page
+    .box1{
+        width: 100%;
+        h1{
+            font-size: 4rem;
+            color: $fontColor;
+            text-shadow: 4px 2px $shadowColor;
+            font-family: 'Binggrae-Two';
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 2s;
+        }
+    }
+    // profile
+    .box2{
+        width: 100%;
+        display: flex;
+        opacity: 0;
+        transform: translateX(-500px);
+        transition: all 2s;
+        position: relative;
+        .photo{
+            width: 30%;
+            margin-right: 4%;
+            background-color: lightpink;
+            img{
+                width: 100%;
+            }
+        }
+        
+        .profile{
+            width: 57%;
+            position: relative;
+            display: inline-block;
+            // overflow: hidden;
+            h2{
+                color: $fontColor;
+                font-family: 'Binggrae-Two';
+                text-shadow: 4px 2px $shadowColor;
+                font-weight: bold;
+                font-size: 3rem;
+                margin-bottom: 7%;
+                display: inline-block;
+            }
+            .info:nth-of-type(1){
+                border-top: 2px solid $fontColor; 
+            }
+            .info {
+                width: 100%;
+                border-bottom: 2px solid $fontColor;
+                color: $fontColor;
+                font-family: 'Binggrae-Two';
+                padding: 2%;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                span{
+                    display: inline-block;
+                }
+                .popup,.popup3{
+                    color: $fontColor;
+                    font-family: 'Binggrae-Two';
+                    border: 2px solid $fontColor;
+                    background-color: $bgColor;
+                    padding: 0.66rem;
+                    position: absolute;
+                    // top: 40%;
+                    // left: 25%;                    
+                    z-index: 5;
+                    display: none;
+                    p{
+                        font-size: 0.66rem;
+                    }
+                }
+                .popup1,.popup2{
+                    position: absolute;
+                    top: 220%;
+                }
+                .popup3 {
+                    // display: flex;
+                    flex-wrap: wrap;
+                    display: none;
+                    position: absolute;
+                    top: -130%;
+                    // left: 25%;
+                    .skill {
+                        width: 8%;
+                        margin: 1% 3%;
+                        img {
+                            width: 100%;
+                        }
+                        p{
+                            text-align: center;
+                            font-size: 0.4rem;
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}
+
+.swiper-slide:nth-of-type(3){
+    padding: 2% 5%;
+    // position: relative;
+}
+
+.swiper-pagination{
+    .swiper-pagination-bullet{
+        background-color: $fontColor; 
+    }   
+}

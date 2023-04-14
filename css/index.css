@@ -1,0 +1,957 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #0b7b4d;
+}
+
+.box3 {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.box3 h2 {
+  color: #0b7b4d;
+  font-family: "Binggrae-Two";
+  text-shadow: 4px 2px #fbb9a5;
+  font-weight: bold;
+  font-size: 3rem;
+  display: inline-block;
+}
+.box3 p {
+  color: #0b7b4d;
+  font-family: "Binggrae-Two";
+  font-size: 0.7rem;
+}
+.box3 .carousel {
+  position: relative;
+  z-index: 1;
+  height: 75vh;
+  overflow: hidden;
+  pointer-events: none;
+  border: 3px solid #0b7b4d;
+}
+.box3 .carousel-item {
+  --items: 6;
+  --width: clamp(150px, 30vw, 300px);
+  --height: clamp(200px, 40vw, 400px);
+  --x: calc(var(--active) * 400%);
+  --y: calc(var(--active) * 100%);
+  --rot: calc(var(--active) * 120deg);
+  overflow: hidden;
+  position: absolute;
+  z-index: var(--zIndex);
+  width: var(--width);
+  height: var(--height);
+  margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transform-origin: 0% 100%;
+  box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.5);
+  background: black;
+  pointer-events: all;
+  transform: translate(var(--x), var(--y)) rotate(var(--rot));
+  transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
+}
+.box3 .carousel-item .carousel-box {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+  font-family: "Binggrae-Two";
+  cursor: pointer;
+}
+.box3 .carousel-item .carousel-box:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5));
+}
+.box3 .carousel-item .title {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  bottom: 20px;
+  left: 20px;
+  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+  font-size: clamp(20px, 3vw, 30px);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+.box3 .carousel-item .num {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  top: 10px;
+  left: 20px;
+  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+  font-size: clamp(20px, 10vw, 80px);
+}
+.box3 .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+.box3 .project {
+  width: 100%;
+  height: 100%;
+  background-color: #faefeb;
+  color: #0b7b4d;
+  border: 3px solid #0b7b4d;
+  font-family: "Binggrae-Two";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: none;
+}
+.box3 .project .remote {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 3px solid #0b7b4d;
+}
+.box3 .project .content {
+  width: 100%;
+  height: 90%;
+}
+.box3 .project .content1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: none;
+}
+.box3 .project .content1 .homepage {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.box3 .project .content1 .homepage .hovering {
+  background-color: rgba(225, 225, 225, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 1;
+}
+.box3 .project .content1 .homepage .hovering span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box3 .project .content1 .homepage img {
+  width: 100%;
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content1 .homepage img:hover {
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content1 .text {
+  width: 60%;
+  border-left: 3px solid #0b7b4d;
+  padding: 0.5% 2%;
+}
+.box3 .project .content1 .text .name {
+  width: 100%;
+}
+.box3 .project .content1 .text .name p {
+  font-size: 0.7rem;
+}
+.box3 .project .content1 .text .name h3 {
+  font-family: "Binggrae-Two";
+  font-size: 2rem;
+}
+.box3 .project .content1 .text .explain {
+  width: 100%;
+  padding: 3% 0;
+}
+.box3 .project .content1 .text .explain .use {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.box3 .project .content1 .text .explain .use .type {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.box3 .project .content1 .text .explain .use .type span {
+  border: 3px solid #0b7b4d;
+  font-size: 0.7rem;
+  border-radius: 50px;
+  padding: 1% 2%;
+  margin-right: 2%;
+}
+.box3 .project .content1 .text .explain .use .palette {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box3 .project .content1 .text .explain .use .palette .color {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #0b7b4d;
+  border-radius: 100%;
+  margin-left: 5%;
+}
+.box3 .project .content1 .text .explain .how {
+  width: 100%;
+  height: 276px;
+  margin: 3% 0;
+}
+.box3 .project .content1 .text .explain .how p {
+  font-size: 0.7rem;
+  margin: 0.5% 0;
+}
+.box3 .project .content1 .text .explain .link {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.box3 .project .content1 .text .explain .link .webpage, .box3 .project .content1 .text .explain .link .document {
+  width: 40%;
+  margin: 2% 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0b7b4d;
+}
+.box3 .project .content1 .homepage img:hover {
+  transform: translateY(-58%);
+}
+.box3 .project .content2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: none;
+}
+.box3 .project .content2 .homepage {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.box3 .project .content2 .homepage .hovering {
+  background-color: rgba(225, 225, 225, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 1;
+}
+.box3 .project .content2 .homepage .hovering span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box3 .project .content2 .homepage img {
+  width: 100%;
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content2 .homepage img:hover {
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content2 .text {
+  width: 60%;
+  border-left: 3px solid #0b7b4d;
+  padding: 0.5% 2%;
+}
+.box3 .project .content2 .text .name {
+  width: 100%;
+}
+.box3 .project .content2 .text .name p {
+  font-size: 0.7rem;
+}
+.box3 .project .content2 .text .name h3 {
+  font-family: "Binggrae-Two";
+  font-size: 2rem;
+}
+.box3 .project .content2 .text .explain {
+  width: 100%;
+  padding: 3% 0;
+}
+.box3 .project .content2 .text .explain .use {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.box3 .project .content2 .text .explain .use .type {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.box3 .project .content2 .text .explain .use .type span {
+  border: 3px solid #0b7b4d;
+  font-size: 0.7rem;
+  border-radius: 50px;
+  padding: 1% 2%;
+  margin-right: 2%;
+}
+.box3 .project .content2 .text .explain .use .palette {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box3 .project .content2 .text .explain .use .palette .color {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #0b7b4d;
+  border-radius: 100%;
+  margin-left: 5%;
+}
+.box3 .project .content2 .text .explain .how {
+  width: 100%;
+  height: 276px;
+  margin: 3% 0;
+}
+.box3 .project .content2 .text .explain .how p {
+  font-size: 0.7rem;
+  margin: 0.5% 0;
+}
+.box3 .project .content2 .text .explain .link {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.box3 .project .content2 .text .explain .link .webpage, .box3 .project .content2 .text .explain .link .document {
+  width: 40%;
+  margin: 2% 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0b7b4d;
+}
+.box3 .project .content2 .homepage img:hover {
+  transform: translateY(-76%);
+}
+.box3 .project .content3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: none;
+}
+.box3 .project .content3 .homepage {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.box3 .project .content3 .homepage .hovering {
+  background-color: rgba(225, 225, 225, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 1;
+}
+.box3 .project .content3 .homepage .hovering span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box3 .project .content3 .homepage img {
+  width: 100%;
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content3 .homepage img:hover {
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content3 .text {
+  width: 60%;
+  border-left: 3px solid #0b7b4d;
+  padding: 0.5% 2%;
+}
+.box3 .project .content3 .text .name {
+  width: 100%;
+}
+.box3 .project .content3 .text .name p {
+  font-size: 0.7rem;
+}
+.box3 .project .content3 .text .name h3 {
+  font-family: "Binggrae-Two";
+  font-size: 2rem;
+}
+.box3 .project .content3 .text .explain {
+  width: 100%;
+  padding: 3% 0;
+}
+.box3 .project .content3 .text .explain .use {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.box3 .project .content3 .text .explain .use .type {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.box3 .project .content3 .text .explain .use .type span {
+  border: 3px solid #0b7b4d;
+  font-size: 0.7rem;
+  border-radius: 50px;
+  padding: 1% 2%;
+  margin-right: 2%;
+}
+.box3 .project .content3 .text .explain .use .palette {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box3 .project .content3 .text .explain .use .palette .color {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #0b7b4d;
+  border-radius: 100%;
+  margin-left: 5%;
+}
+.box3 .project .content3 .text .explain .how {
+  width: 100%;
+  height: 276px;
+  margin: 3% 0;
+}
+.box3 .project .content3 .text .explain .how p {
+  font-size: 0.7rem;
+  margin: 0.5% 0;
+}
+.box3 .project .content3 .text .explain .link {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.box3 .project .content3 .text .explain .link .webpage, .box3 .project .content3 .text .explain .link .document {
+  width: 40%;
+  margin: 2% 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0b7b4d;
+}
+.box3 .project .content3 .homepage img:hover {
+  transform: translateY(-53.5%);
+}
+.box3 .project .content4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: none;
+}
+.box3 .project .content4 .homepage {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.box3 .project .content4 .homepage .hovering {
+  background-color: rgba(225, 225, 225, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 1;
+}
+.box3 .project .content4 .homepage .hovering span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box3 .project .content4 .homepage img {
+  width: 100%;
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content4 .homepage img:hover {
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content4 .text {
+  width: 60%;
+  border-left: 3px solid #0b7b4d;
+  padding: 0.5% 2%;
+}
+.box3 .project .content4 .text .name {
+  width: 100%;
+}
+.box3 .project .content4 .text .name p {
+  font-size: 0.7rem;
+}
+.box3 .project .content4 .text .name h3 {
+  font-family: "Binggrae-Two";
+  font-size: 2rem;
+}
+.box3 .project .content4 .text .explain {
+  width: 100%;
+  padding: 3% 0;
+}
+.box3 .project .content4 .text .explain .use {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.box3 .project .content4 .text .explain .use .type {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.box3 .project .content4 .text .explain .use .type span {
+  border: 3px solid #0b7b4d;
+  font-size: 0.7rem;
+  border-radius: 50px;
+  padding: 1% 2%;
+  margin-right: 2%;
+}
+.box3 .project .content4 .text .explain .use .palette {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box3 .project .content4 .text .explain .use .palette .color {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #0b7b4d;
+  border-radius: 100%;
+  margin-left: 5%;
+}
+.box3 .project .content4 .text .explain .how {
+  width: 100%;
+  height: 276px;
+  margin: 3% 0;
+}
+.box3 .project .content4 .text .explain .how p {
+  font-size: 0.7rem;
+  margin: 0.5% 0;
+}
+.box3 .project .content4 .text .explain .link {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.box3 .project .content4 .text .explain .link .webpage, .box3 .project .content4 .text .explain .link .document {
+  width: 40%;
+  margin: 2% 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0b7b4d;
+}
+.box3 .project .content4 .homepage img:hover {
+  transform: translateY(-67.5%);
+}
+.box3 .project .content5 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: none;
+}
+.box3 .project .content5 .homepage {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.box3 .project .content5 .homepage .hovering {
+  background-color: rgba(225, 225, 225, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 1;
+}
+.box3 .project .content5 .homepage .hovering span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box3 .project .content5 .homepage img {
+  width: 100%;
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content5 .homepage img:hover {
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content5 .text {
+  width: 60%;
+  border-left: 3px solid #0b7b4d;
+  padding: 0.5% 2%;
+}
+.box3 .project .content5 .text .name {
+  width: 100%;
+}
+.box3 .project .content5 .text .name p {
+  font-size: 0.7rem;
+}
+.box3 .project .content5 .text .name h3 {
+  font-family: "Binggrae-Two";
+  font-size: 2rem;
+}
+.box3 .project .content5 .text .explain {
+  width: 100%;
+  padding: 3% 0;
+}
+.box3 .project .content5 .text .explain .use {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.box3 .project .content5 .text .explain .use .type {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.box3 .project .content5 .text .explain .use .type span {
+  border: 3px solid #0b7b4d;
+  font-size: 0.7rem;
+  border-radius: 50px;
+  padding: 1% 2%;
+  margin-right: 2%;
+}
+.box3 .project .content5 .text .explain .use .palette {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box3 .project .content5 .text .explain .use .palette .color {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #0b7b4d;
+  border-radius: 100%;
+  margin-left: 5%;
+}
+.box3 .project .content5 .text .explain .how {
+  width: 100%;
+  height: 276px;
+  margin: 3% 0;
+}
+.box3 .project .content5 .text .explain .how p {
+  font-size: 0.7rem;
+  margin: 0.5% 0;
+}
+.box3 .project .content5 .text .explain .link {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.box3 .project .content5 .text .explain .link .webpage, .box3 .project .content5 .text .explain .link .document {
+  width: 40%;
+  margin: 2% 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0b7b4d;
+}
+.box3 .project .content5 .homepage img:hover {
+  transform: translateY(-61.1%);
+}
+.box3 .project .content6 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: none;
+}
+.box3 .project .content6 .homepage {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+.box3 .project .content6 .homepage .hovering {
+  background-color: rgba(225, 225, 225, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 1;
+}
+.box3 .project .content6 .homepage .hovering span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box3 .project .content6 .homepage img {
+  width: 100%;
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content6 .homepage img:hover {
+  transition: all 3s ease-in-out;
+}
+.box3 .project .content6 .text {
+  width: 60%;
+  border-left: 3px solid #0b7b4d;
+  padding: 0.5% 2%;
+}
+.box3 .project .content6 .text .name {
+  width: 100%;
+}
+.box3 .project .content6 .text .name p {
+  font-size: 0.7rem;
+}
+.box3 .project .content6 .text .name h3 {
+  font-family: "Binggrae-Two";
+  font-size: 2rem;
+}
+.box3 .project .content6 .text .explain {
+  width: 100%;
+  padding: 3% 0;
+}
+.box3 .project .content6 .text .explain .use {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.box3 .project .content6 .text .explain .use .type {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.box3 .project .content6 .text .explain .use .type span {
+  border: 3px solid #0b7b4d;
+  font-size: 0.7rem;
+  border-radius: 50px;
+  padding: 1% 2%;
+  margin-right: 2%;
+}
+.box3 .project .content6 .text .explain .use .palette {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.box3 .project .content6 .text .explain .use .palette .color {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #0b7b4d;
+  border-radius: 100%;
+  margin-left: 5%;
+}
+.box3 .project .content6 .text .explain .how {
+  width: 100%;
+  height: 276px;
+  margin: 3% 0;
+}
+.box3 .project .content6 .text .explain .how p {
+  font-size: 0.7rem;
+  margin: 0.5% 0;
+}
+.box3 .project .content6 .text .explain .link {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.box3 .project .content6 .text .explain .link .webpage, .box3 .project .content6 .text .explain .link .document {
+  width: 40%;
+  margin: 2% 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0b7b4d;
+}
+.box3 .project .content6 .homepage img:hover {
+  transform: translateY(-61.1%);
+}
+.box3 .cursor {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
+  transition: transform 0.85s cubic-bezier(0, 0.02, 0, 1);
+  display: none;
+  pointer-events: none;
+}
+@media (pointer: fine) {
+  .box3 .cursor {
+    display: block;
+  }
+}
+.box3 .cursor2 {
+  --size: 2px;
+  transition-duration: 0.7s;
+}
+
+@font-face {
+  font-family: "Binggrae-Two";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  background-color: #faefeb;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  width: 95%;
+  height: 100%;
+}
+
+.swiper-slide {
+  padding: 10% 5%;
+}
+.swiper-slide .box1 {
+  width: 100%;
+}
+.swiper-slide .box1 h1 {
+  font-size: 4rem;
+  color: #0b7b4d;
+  text-shadow: 4px 2px #fbb9a5;
+  font-family: "Binggrae-Two";
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s;
+}
+.swiper-slide .box2 {
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: all 2s;
+  position: relative;
+}
+.swiper-slide .box2 .photo {
+  width: 30%;
+  margin-right: 4%;
+  background-color: lightpink;
+}
+.swiper-slide .box2 .photo img {
+  width: 100%;
+}
+.swiper-slide .box2 .profile {
+  width: 57%;
+  position: relative;
+  display: inline-block;
+}
+.swiper-slide .box2 .profile h2 {
+  color: #0b7b4d;
+  font-family: "Binggrae-Two";
+  text-shadow: 4px 2px #fbb9a5;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 7%;
+  display: inline-block;
+}
+.swiper-slide .box2 .profile .info:nth-of-type(1) {
+  border-top: 2px solid #0b7b4d;
+}
+.swiper-slide .box2 .profile .info {
+  width: 100%;
+  border-bottom: 2px solid #0b7b4d;
+  color: #0b7b4d;
+  font-family: "Binggrae-Two";
+  padding: 2%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.swiper-slide .box2 .profile .info span {
+  display: inline-block;
+}
+.swiper-slide .box2 .profile .info .popup, .swiper-slide .box2 .profile .info .popup3 {
+  color: #0b7b4d;
+  font-family: "Binggrae-Two";
+  border: 2px solid #0b7b4d;
+  background-color: #faefeb;
+  padding: 0.66rem;
+  position: absolute;
+  z-index: 5;
+  display: none;
+}
+.swiper-slide .box2 .profile .info .popup p, .swiper-slide .box2 .profile .info .popup3 p {
+  font-size: 0.66rem;
+}
+.swiper-slide .box2 .profile .info .popup1, .swiper-slide .box2 .profile .info .popup2 {
+  position: absolute;
+  top: 220%;
+}
+.swiper-slide .box2 .profile .info .popup3 {
+  flex-wrap: wrap;
+  display: none;
+  position: absolute;
+  top: -130%;
+}
+.swiper-slide .box2 .profile .info .popup3 .skill {
+  width: 8%;
+  margin: 1% 3%;
+}
+.swiper-slide .box2 .profile .info .popup3 .skill img {
+  width: 100%;
+}
+.swiper-slide .box2 .profile .info .popup3 .skill p {
+  text-align: center;
+  font-size: 0.4rem;
+}
+
+.swiper-slide:nth-of-type(3) {
+  padding: 2% 5%;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #0b7b4d;
+}
