@@ -135,8 +135,11 @@ a {
 .box3 .project .remote .brand a {
   opacity: 0.5;
 }
-.box3 .project .remote .active {
-  color: #0b7b4d;
+.box3 .project .remote .brand a:hover {
+  opacity: 1;
+}
+.box3 .project .remote .brand a.active {
+  opacity: 1;
 }
 .box3 .project .content {
   width: 100%;
@@ -905,8 +908,15 @@ body {
   font-family: "Binggrae-Two";
   font-weight: bold;
   text-align: center;
+}
+.swiper-slide .box1 .text1 {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateX(-300px);
+  transition: all 2s;
+}
+.swiper-slide .box1 .text2 {
+  opacity: 0;
+  transform: translateX(300px);
   transition: all 2s;
 }
 .swiper-slide .box2 {

@@ -248,9 +248,12 @@ $fontColor : #0b7b4d;
                 a{
                     opacity: 0.5;
                 }
+                a:hover{
+                    opacity: 1;
+                }
             }
-            .active{
-                color: $fontColor;
+            .brand a.active{
+                opacity: 1;
             }
         }
         .content{

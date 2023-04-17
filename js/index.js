@@ -1,6 +1,7 @@
 // Home
 $(function(){
-    $('.box1 h1').css("transform","translateY(0px)").css("opacity","1");
+    $('.text1').css("transform","translateX(0px)").css("opacity","1");
+    $('.text2').css("transform","translateX(0px)").css("opacity","1");
 });
 
 // Profile
@@ -125,7 +126,9 @@ $(function(){
   $('.carousel-box').each(function(index){    
     $(this).click(function(){
       $('.project').fadeIn();
-      $(`.fade`).hide();
+      $('.fade').hide();
+      $('.brand').children('a').fadeIn().removeClass('active');
+      $('.brand').eq(index).children('a').fadeIn().addClass('active');
       $(`.content${index+1}`).fadeIn().css('display','flex');
     });
   });
@@ -139,6 +142,8 @@ $(function(){
 $(function(){
   $('.brand').each(function(index){
     $(this).click(function(){
+      $('.brand').children('a').removeClass('active');
+      $(this).children('a').addClass('active');
       $(`.fade`).hide();
       $(`.content${index+1}`).fadeIn().css('display','flex');
     });
@@ -164,19 +169,21 @@ var swiper = new Swiper(".mySwiper", {
   },
   on: {
     slideChange: function () {
-      
+  
       // Home, Profile intro animation
       var ws=this.activeIndex;
 
       console.log(this.activeIndex);
 
       if(ws==0){
-        $('.box1 h1').css("transform","translateY(0px)").css("opacity","1");
+        $('.text1').css("transform","translateX(0px)").css("opacity","1");
+        $('.text2').css("transform","translateX(0px)").css("opacity","1");
         $('.box2').css("transform","translateX(-500px)").css("opacity","0");
       }
 
       if(ws==1){
-        $('.box1 h1').css("transform","translateY(100px)").css("opacity","0");
+        $('.text1').css("transform","translateX(-300px)").css("opacity","0");
+        $('.text2').css("transform","translateX(300px)").css("opacity","1");
         $('.box2').css("transform","translateX(0px)").css("opacity","1");
       }
 
