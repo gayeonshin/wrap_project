@@ -730,123 +730,6 @@ a {
 .box3 .project .content5 .homepage img:hover {
   transform: translateY(-61.1%);
 }
-.box3 .project .content6 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  display: none;
-}
-.box3 .project .content6 .homepage {
-  width: 40%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  cursor: grab;
-}
-.box3 .project .content6 .homepage .hovering {
-  background-color: rgba(225, 225, 225, 0.5);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 1;
-}
-.box3 .project .content6 .homepage .hovering span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.box3 .project .content6 .homepage img {
-  width: 100%;
-  transition: all 3s ease-in-out;
-}
-.box3 .project .content6 .homepage img:hover {
-  transition: all 3s ease-in-out;
-}
-.box3 .project .content6 .text {
-  width: 60%;
-  border-left: 3px solid #0b7b4d;
-  padding: 0.5% 2%;
-}
-.box3 .project .content6 .text .name {
-  width: 100%;
-}
-.box3 .project .content6 .text .name p {
-  font-size: 0.7rem;
-}
-.box3 .project .content6 .text .name h3 {
-  font-family: "Binggrae-Two";
-  font-size: 2rem;
-}
-.box3 .project .content6 .text .explain {
-  width: 100%;
-  padding: 3% 0;
-}
-.box3 .project .content6 .text .explain .use {
-  width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: space-between;
-}
-.box3 .project .content6 .text .explain .use .type {
-  width: 70%;
-  display: flex;
-  align-items: center;
-}
-.box3 .project .content6 .text .explain .use .type span {
-  border: 3px solid #0b7b4d;
-  font-size: 0.7rem;
-  border-radius: 50px;
-  padding: 1% 2%;
-  margin-right: 2%;
-}
-.box3 .project .content6 .text .explain .use .palette {
-  width: 30%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.box3 .project .content6 .text .explain .use .palette .color {
-  width: 50px;
-  height: 50px;
-  border: 3px solid #0b7b4d;
-  border-radius: 100%;
-  margin-left: 5%;
-}
-.box3 .project .content6 .text .explain .how {
-  width: 100%;
-  height: 276px;
-  margin: 3% 0;
-}
-.box3 .project .content6 .text .explain .how p {
-  font-size: 0.7rem;
-  margin: 0.5% 0;
-}
-.box3 .project .content6 .text .explain .link {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  cursor: pointer;
-}
-.box3 .project .content6 .text .explain .link .webpage, .box3 .project .content6 .text .explain .link .document {
-  width: 40%;
-  margin: 2% 0;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #0b7b4d;
-}
-.box3 .project .content6 .text .explain .link .webpage:hover, .box3 .project .content6 .text .explain .link .document:hover {
-  background-color: #0b7b4d;
-}
-.box3 .project .content6 .text .explain .link .webpage:hover a, .box3 .project .content6 .text .explain .link .document:hover a {
-  color: #faefeb;
-}
-.box3 .project .content6 .homepage img:hover {
-  transform: translateY(-61.1%);
-}
 .box3 .cursor {
   position: fixed;
   z-index: 10;
@@ -856,7 +739,7 @@ a {
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
   margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
   transition: transform 0.85s cubic-bezier(0, 0.02, 0, 1);
   display: none;
@@ -930,7 +813,6 @@ body {
 .swiper-slide .box2 .photo {
   width: 30%;
   margin-right: 4%;
-  background-color: lightpink;
 }
 .swiper-slide .box2 .photo img {
   width: 100%;
@@ -999,9 +881,38 @@ body {
   text-align: center;
   font-size: 0.4rem;
 }
+.swiper-slide .box4 {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+}
+.swiper-slide .box4 h1 {
+  font-size: 4rem;
+  color: #0b7b4d;
+  text-shadow: 4px 2px #fbb9a5;
+  font-family: "Binggrae-Two";
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+.swiper-slide .box4 .footer {
+  color: #0b7b4d;
+  font-family: "Binggrae-Two";
+  margin-top: 20%;
+}
+.swiper-slide .box4 .footer p {
+  font-size: 0.5rem;
+}
 
 .swiper-slide:nth-of-type(3) {
   padding: 2% 5%;
+}
+
+.swiper-slide:nth-of-type(4) {
+  padding: 20% 5% 0 5%;
+  position: relative;
 }
 
 .swiper-pagination .swiper-pagination-bullet {

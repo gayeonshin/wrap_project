@@ -183,7 +183,7 @@ var swiper = new Swiper(".mySwiper", {
 
       if(ws==1){
         $('.text1').css("transform","translateX(-300px)").css("opacity","0");
-        $('.text2').css("transform","translateX(300px)").css("opacity","1");
+        $('.text2').css("transform","translateX(300px)").css("opacity","0");
         $('.box2').css("transform","translateX(0px)").css("opacity","1");
       }
 
@@ -228,6 +228,21 @@ var swiper = new Swiper(".mySwiper", {
         translateZ: 0,
         duration: 750,
         delay: (el, i) => 50 * i
+      })
+
+      // Thank You animation
+      var textWrapper = document.querySelector('.box4 h1');
+      textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<h1>$&</h1>");
+
+      anime.timeline({ loop: false })
+      .add({
+        targets: '.box4 h1',
+        scale: [0.3, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 600,
+        delay: (el, i) => 70 * (i + 1)
       })
     }
   }  

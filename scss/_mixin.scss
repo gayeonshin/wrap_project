@@ -304,15 +304,15 @@ $fontColor : #0b7b4d;
                     }
                 }
             }
-            &6{
-                @include content;
-                display: none;
-                .homepage{
-                    img:hover{
-                        transform: translateY(-61.1%);
-                    }
-                }
-            } 
+            // &6{
+            //     @include content;
+            //     display: none;
+            //     .homepage{
+            //         img:hover{
+            //             transform: translateY(-61.1%);
+            //         }
+            //     }
+            // } 
         }   
     }
       
@@ -325,7 +325,7 @@ $fontColor : #0b7b4d;
         width: var(--size);
         height: var(--size);
         border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, .2);
+        border: none;
         margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
         transition: transform .85s cubic-bezier(0, 0.02, 0, 1);
         display: none;
